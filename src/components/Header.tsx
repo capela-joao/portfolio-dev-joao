@@ -27,11 +27,11 @@ const Header = () => {
         <div className="flex gap-4 pt-2">
           <SocialLink
             href="https://github.com/capela-joao"
-            icon="/assets/github-logo.png"
+            icon="/assets/socials/github-logo.png"
           />
           <SocialLink
             href="https://www.linkedin.com/in/joaopaulogoulart/"
-            icon="/assets/linkedin.png"
+            icon="/assets/socials/linkedin.png"
           />
         </div>
       </div>
