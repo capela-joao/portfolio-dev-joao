@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { div } from 'framer-motion/client';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

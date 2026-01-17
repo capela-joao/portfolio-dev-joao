@@ -1,32 +1,103 @@
+'use client';
 import TechCard from './utils/TechCard';
 import { mainStack, techCategories } from '@/data/arrayCategories';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
+
+type Direction = 'next' | 'prev';
 
 const StackCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const allTechs = techCategories.flatMap((category) => category.techs);
+  const itemsPerPage = 8;
+  const totalPages = Math.ceil(allTechs.length / itemsPerPage);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % totalPages);
+    }, 4000); // aumentei pra 4 segundos
+
+    return () => clearInterval(interval);
+  }, [isPaused, totalPages]);
+
+  const handleTransition = (dir: Direction) => {
+    setCurrentIndex((prev) =>
+      dir === 'next'
+        ? (prev + 1) % totalPages
+        : (prev - 1 + totalPages) % totalPages
+    );
+  };
+
+  const currentTechs = allTechs.slice(
+    currentIndex * itemsPerPage,
+    (currentIndex + 1) * itemsPerPage
+  );
+
   return (
     <section className="mt-4 md:mt-10 md:px-10">
-      <h3 className="text-3xl font-semibold mb-6 md:mt-20 text-center md:text-left">
+      <h3 className="text-2xl md:text-3xl font-semibold mb-6 md:mt-20 text-center md:text-left">
         Main Stack
       </h3>
 
-      <div className="flex justify-center md:justify-start gap-4 flex-wrap">
+      <div
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 
+          md:gap-4"
+      >
         {mainStack.map((tech) => (
           <TechCard key={tech.name} name={tech.name} icon={tech.icon} />
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-4 md:mt-10">
-        {techCategories.map((category) => (
-          <div key={category.title} className="mt-4 md:mt-10">
-            <h4 className="font-semibold mb-3 text-xl text-center md:text-left">
-              {category.title}
-            </h4>
-            <div className="flex justify-center md:justify-start gap-3 flex-wrap">
-              {category.techs.map((tech) => (
-                <TechCard key={tech.name} icon={tech.icon} name={tech.name} />
-              ))}
-            </div>
+      <h3
+        className="text-2xl md:text-3xl font-semibold mt-10 md:mt-20 mb-6 md:mb-8 text-center 
+      md:text-left"
+      >
+        Outras tecnologias
+      </h3>
+
+      <div
+        className="relative"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <button
+          onClick={() => handleTransition('prev')}
+          className="absolute left-4 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 -translate-x-4 
+          md:-translate-x-12 z-10 bg-white shadow-lg rounded-full p-2 md:p-3 
+          hover:bg-gray-100 transition-all"
+        >
+          <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+        </button>
+
+        <div className="overflow-hidden relative">
+          <div
+            key={currentIndex}
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4"
+          >
+            {currentTechs.map((tech, index) => (
+              <div
+                key={tech.name}
+                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+                style={{ animationDelay: `${index * 75}ms` }}
+              >
+                <TechCard icon={tech.icon} name={tech.name} />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        <button
+          onClick={() => handleTransition('next')}
+          className="absolute right-4 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 translate-x-4 
+          md:translate-x-12 z-10 bg-white shadow-lg rounded-full p-2 md:p-3 
+          hover:bg-gray-100 transition-all"
+        >
+          <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+        </button>
       </div>
     </section>
   );
