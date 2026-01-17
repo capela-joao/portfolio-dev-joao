@@ -5,13 +5,21 @@ import SocialLink from './utils/SocialLink';
 
 const Header = () => {
   return (
-    <section className="mt-20 flex items-start justify-between gap-10 px-10">
+    <section
+      className="
+      flex flex-col items-center gap-6
+      md:px-6 md:gap-10
+      lg:flex-row lg:justify-between
+      lg:px-8 lg:gap-0
+      py-12
+      "
+    >
       <div className="space-y-4 max-w-xl">
-        <h1 className="font-extrabold text-5xl">
+        <h1 className="font-extrabold text-3xl md:text-4xl lg:text-5xl">
           <AnimatedText text="Olá, eu sou o João Paulo!" />
         </h1>
 
-        <h2 className="font-bold text-2xl text-gray-400">
+        <h2 className="font-bold text-xl text-gray-400">
           <AnimatedText text="Desenvolvedor Front-End" />
         </h2>
 

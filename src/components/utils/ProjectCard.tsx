@@ -12,7 +12,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ image, title, description, link }: ProjectCardProps) => {
   return (
     <div
-      className="flex flex-col items-center p-4 rounded-xl hover:shadow-lg 
+      className="flex flex-col items-center md:p-4 rounded-xl hover:shadow-lg 
     transition hover:scale-105"
     >
       <h3 className="font-bold text-xl text-center p-4">{title}</h3>
