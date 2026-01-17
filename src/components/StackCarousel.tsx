@@ -4,7 +4,7 @@ import { mainStack, techCategories } from '@/data/arrayCategories';
 const StackCarousel = () => {
   return (
     <section className="mt-10 px-10">
-      <h3 className="text-2xl font-semibold mb-6">Main Stack</h3>
+      <h3 className="text-3xl font-semibold mb-6 mt-20">Main Stack</h3>
 
       <div className="flex gap-4 flex-wrap">
         {mainStack.map((tech) => (
