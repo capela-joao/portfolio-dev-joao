@@ -51,7 +51,12 @@ const StackCarousel = () => {
           md:gap-4"
       >
         {mainStack.map((tech) => (
-          <TechCard key={tech.name} name={tech.name} icon={tech.icon} />
+          <TechCard
+            key={tech.name}
+            name={tech.name}
+            icon={tech.icon}
+            darkmode={tech.darkmode}
+          />
         ))}
       </div>
 
@@ -87,7 +92,11 @@ const StackCarousel = () => {
                 className="animate-in fade-in slide-in-from-bottom-4 duration-500"
                 style={{ animationDelay: `${index * 75}ms` }}
               >
-                <TechCard icon={tech.icon} name={tech.name} />
+                <TechCard
+                  icon={tech.icon}
+                  name={tech.name}
+                  darkmode={tech.darkmode}
+                />
               </div>
             ))}
           </div>

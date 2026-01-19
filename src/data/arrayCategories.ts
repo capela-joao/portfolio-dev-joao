@@ -1,6 +1,10 @@
 export const mainStack = [
   { name: 'React', icon: '/assets/stacks/atom.png' },
-  { name: 'Next.js', icon: '/assets/stacks/icons8-nextjs-480.png' },
+  {
+    name: 'Next.js',
+    icon: '/assets/stacks/icons8-nextjs-480.png',
+    darkmode: '/assets/stacks/icons8-nextjs-white-48.png',
+  },
   { name: 'TypeScript', icon: '/assets/stacks/icons8-typescript-480.png' },
   { name: 'TailwindCSS', icon: '/assets/stacks/icons8-tailwindcss-480.png' },
 ];
@@ -12,14 +16,26 @@ export const techCategories = [
       { icon: '/assets/stacks/icons8-html5-48.png', name: 'HTML5' },
       { icon: '/assets/stacks/icons8-javascript-48.png', name: 'JavaScript' },
       { icon: '/assets/stacks/icons8-css3-48.png', name: 'CSS3' },
-      { icon: '/assets/stacks/shadcn.png', name: 'shadcn/ui' },
+      {
+        icon: '/assets/stacks/shadcn.png',
+        name: 'shadcn/ui',
+        darkmode: '/assets/stacks/shadcn-white.png',
+      },
     ],
   },
   {
     title: 'Back-End',
     techs: [
-      { icon: '/assets/stacks/nodejs.png', name: 'Node.js' },
-      { icon: '/assets/stacks/icons8-express-js-48.png', name: 'Express' },
+      {
+        icon: '/assets/stacks/icons8-nodejs-48.png',
+        name: 'Node.js',
+        darkmode: '/assets/stacks/icons8-nodejs-white-48.png',
+      },
+      {
+        icon: '/assets/stacks/icons8-express-js-48.png',
+        name: 'Express',
+        darkmode: '/assets/stacks/icons8-express-white-js-48.png',
+      },
       { icon: '/assets/stacks/php.png', name: 'PHP' },
       { icon: '/assets/stacks/Swagger.png', name: 'Swagger' },
     ],
@@ -28,7 +44,11 @@ export const techCategories = [
     title: 'Databases',
     techs: [
       { icon: '/assets/stacks/icons8-mongodb-48.png', name: 'MongoDB' },
-      { icon: '/assets/stacks/icons8-mysql-50.png', name: 'MySQL' },
+      {
+        icon: '/assets/stacks/icons8-mysql-50.png',
+        name: 'MySQL',
+        darkmode: '/assets/stacks/icons8-mysql-white-50.png',
+      },
       { icon: '/assets/stacks/icons8-firebase-48.png', name: 'Firebase' },
     ],
   },

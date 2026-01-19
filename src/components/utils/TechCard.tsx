@@ -1,11 +1,16 @@
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 type TechCardProps = {
   name?: string;
   icon?: string;
+  darkmode?: string;
 };
 
-const TechCard = ({ name, icon }: TechCardProps) => {
+const TechCard = ({ name, icon, darkmode }: TechCardProps) => {
+  const { theme } = useTheme();
+
+  const currentIcon = theme === 'dark' && darkmode ? darkmode : icon;
   return (
     <div
       className="flex flex-col items-center justify-center gap-2 rounded-xl 
@@ -13,7 +18,7 @@ const TechCard = ({ name, icon }: TechCardProps) => {
     cursor-pointer bg-card"
     >
       <Image
-        src={icon || ''}
+        src={currentIcon || ''}
         alt={name || ''}
         width={40}
         height={40}
