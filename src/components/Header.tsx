@@ -12,10 +12,11 @@ const Header = () => {
       lg:flex-row lg:justify-between
       lg:px-8 lg:gap-0
       py-12
+      bg-background text-foreground
       "
     >
       <div className="space-y-4 max-w-xl">
-        <h1 className="font-extrabold text-3xl md:text-4xl lg:text-5xl">
+        <h1 className="font-extrabold text-3xl md:text-4xl tracking-tight">
           <AnimatedText text="Olá, eu sou o João Paulo!" />
         </h1>
 

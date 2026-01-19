@@ -2,7 +2,7 @@
 import TechCard from './utils/TechCard';
 import { mainStack, techCategories } from '@/data/arrayCategories';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 type Direction = 'next' | 'prev';
 
@@ -19,7 +19,7 @@ const StackCarousel = () => {
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % totalPages);
-    }, 4000); // aumentei pra 4 segundos
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [isPaused, totalPages]);
@@ -38,8 +38,11 @@ const StackCarousel = () => {
   );
 
   return (
-    <section className="mt-4 md:mt-10 md:px-10">
-      <h3 className="text-2xl md:text-3xl font-semibold mb-6 md:mt-20 text-center md:text-left">
+    <section className="mt-4 md:mt-10 md:px-10 bg-background text-foreground">
+      <h3
+        className="text-2xl md:text-3xl font-semibold mb-6 md:mt-20 
+      text-center md:text-left"
+      >
         Main Stack
       </h3>
 
@@ -56,7 +59,7 @@ const StackCarousel = () => {
         className="text-2xl md:text-3xl font-semibold mt-10 md:mt-20 mb-6 md:mb-8 text-center 
       md:text-left"
       >
-        Outras tecnologias
+        Other Technologies
       </h3>
 
       <div
@@ -70,7 +73,7 @@ const StackCarousel = () => {
           md:-translate-x-12 z-10 bg-white shadow-lg rounded-full p-2 md:p-3 
           hover:bg-gray-100 transition-all"
         >
-          <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+          <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 dark:text-gray-800" />
         </button>
 
         <div className="overflow-hidden relative">
@@ -96,7 +99,7 @@ const StackCarousel = () => {
           md:translate-x-12 z-10 bg-white shadow-lg rounded-full p-2 md:p-3 
           hover:bg-gray-100 transition-all"
         >
-          <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+          <ChevronRight className="w-5 h-5 md:w-6 md:h-6 dark:text-gray-800" />
         </button>
       </div>
     </section>

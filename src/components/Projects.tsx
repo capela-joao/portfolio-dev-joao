@@ -4,8 +4,11 @@ import { ProjectData } from '@/data/arrayProjects';
 
 const Projects = () => {
   return (
-    <div className="flex flex-col md:px-10">
-      <h2 className="text-3xl font-semibold mt-10 md:mb-10 md:mt-20 text-center md:text-left">
+    <div className="flex flex-col md:px-10 bg-background text-foreground">
+      <h2
+        className="text-3xl font-semibold mt-10 md:mb-10 md:mt-20 text-center 
+      md:text-left"
+      >
         Projects
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
