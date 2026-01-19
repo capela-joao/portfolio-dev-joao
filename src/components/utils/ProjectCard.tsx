@@ -23,16 +23,27 @@ const ProjectCard = ({ image, title, description, link }: ProjectCardProps) => {
         height={400}
         className="object-cover"
       />
-      <p className="font-base text-lg space-y-1 text-muted-foreground p-4 text-justify">
+      <p className="font-base text-lg space-y-1 text-foreground p-4 text-justify">
         {description}
       </p>
-      <Link
-        href={link}
-        className="mt-auto bg-blue-600 p-4 px-10 text-center rounded-lg 
-        text-white font-semibold hover:bg-blue-500 transition hover:scale-105 mb-6"
-      >
-        Ver projeto
-      </Link>
+      <div className="flex justify-between gap-2">
+        <Link
+          href={link}
+          className="mt-auto bg-accent hover:bg-accent/80 p-4 px-10 text-center rounded-lg 
+          text-text-accent-foreground
+          font-semibold transition hover:scale-105 mb-6"
+        >
+          Ver projeto
+        </Link>
+        <Link
+          href={link}
+          className="mt-auto bg-accent hover:bg-accent/80 p-4 px-10 text-center rounded-lg 
+          text-text-accent-foreground
+          font-semibold transition hover:scale-105 mb-6"
+        >
+          Ver Repositório
+        </Link>
+      </div>
     </div>
   );
 };

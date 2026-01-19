@@ -2,8 +2,10 @@
 import Image from 'next/image';
 import AnimatedText from './utils/AnimatedText';
 import SocialLink from './utils/SocialLink';
+import { useTheme } from 'next-themes';
 
 const Header = () => {
+  const { resolvedTheme } = useTheme();
   return (
     <section
       className="
@@ -24,7 +26,7 @@ const Header = () => {
           <AnimatedText text="Desenvolvedor Front-End" />
         </h2>
 
-        <div className="space-y-1 text-muted-foreground">
+        <div className="space-y-1 text-foreground">
           <p>Desenvolvedor Front-End focado em interfaces web modernas.</p>
           <p>Trabalho com React, TypeScript, Next.js e TailwindCSS.</p>
           <p>
@@ -34,10 +36,17 @@ const Header = () => {
         </div>
 
         <div className="flex gap-4 pt-2">
-          <SocialLink
-            href="https://github.com/capela-joao"
-            icon="/assets/socials/github-logo.png"
-          />
+          {resolvedTheme === 'dark' ? (
+            <SocialLink
+              href="https://dev.to/capela_joao"
+              icon="/assets/socials/github-white-icon.png"
+            />
+          ) : (
+            <SocialLink
+              href="https://github.com/capela-joao"
+              icon="/assets/socials/github-logo.png"
+            />
+          )}
           <SocialLink
             href="https://www.linkedin.com/in/joaopaulogoulart/"
             icon="/assets/socials/linkedin.png"

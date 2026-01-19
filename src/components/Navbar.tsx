@@ -25,8 +25,9 @@ const Navbar = () => {
   ];
   return (
     <nav
-      className="w-full h-16 flex justify-between px-6 shadow-md relative
-    bg-background text-foreground"
+      className="w-full h-16 flex justify-between px-6 shadow-md 
+      dark:shadow-none border 
+      border-border relative bg-background text-foreground"
     >
       <div className="flex items-center font-bold text-2xl md:text-3xl">
         <Link href="/">Dev-Joao</Link>
@@ -34,7 +35,12 @@ const Navbar = () => {
 
       <div className="hidden lg:flex gap-4 px-6 items-center">
         {menuItems.map((item) => (
-          <Link key={item.href} href={item.href}>
+          <Link
+            key={item.href}
+            href={item.href}
+            className="hover:text-accent-foreground hover:bg-accent p-2 
+            rounded-md"
+          >
             {item.label}
           </Link>
         ))}
@@ -45,7 +51,8 @@ const Navbar = () => {
         <ChangeTheme />
         <button
           onClick={toggleMenu}
-          className="lg:hidden p-2 hover:bg-gray-100 rounded-md transition-colors 
+          className="lg:hidden p-2 hover:bg-accent hover:text-accent-foreground 
+          rounded-md transition-colors 
         cursor-pointer"
           aria-label="Toggle menu"
         >
@@ -55,16 +62,16 @@ const Navbar = () => {
 
       {isOpen && (
         <div
-          className="absolute top-16 left-0 w-full shadow-lg lg:hidden
-          bg-background text-foreground"
+          className="absolute top-16 left-0 w-full shadow-md lg:hidden
+          bg-background text-foreground border-b border-border dark:shadow-none"
         >
           <div className="flex flex-col px-6 py-4 gap-4">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-900 dark:text-gray-100 hover:text-blue-600 
-                transition-colors"
+                className="text-foreground hover:text-accent-foreground hover:bg-accent
+                transition-colors p-2 rounded-md"
               >
                 {item.label}
               </Link>

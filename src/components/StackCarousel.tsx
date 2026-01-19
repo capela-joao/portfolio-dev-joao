@@ -43,7 +43,7 @@ const StackCarousel = () => {
         className="text-2xl md:text-3xl font-semibold mb-6 md:mt-20 
       text-center md:text-left"
       >
-        Main Stack
+        Principais Tecnologias
       </h3>
 
       <div
@@ -59,7 +59,7 @@ const StackCarousel = () => {
         className="text-2xl md:text-3xl font-semibold mt-10 md:mt-20 mb-6 md:mb-8 text-center 
       md:text-left"
       >
-        Other Technologies
+        Outras Tecnologias
       </h3>
 
       <div
@@ -70,10 +70,10 @@ const StackCarousel = () => {
         <button
           onClick={() => handleTransition('prev')}
           className="absolute left-4 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 -translate-x-4 
-          md:-translate-x-12 z-10 bg-white shadow-lg rounded-full p-2 md:p-3 
-          hover:bg-gray-100 transition-all"
+          md:-translate-x-12 z-10 bg-background shadow-lg rounded-full p-2 md:p-3 
+          cursor-pointer transition-all"
         >
-          <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 dark:text-gray-800" />
+          <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-foreground" />
         </button>
 
         <div className="overflow-hidden relative">
@@ -96,10 +96,10 @@ const StackCarousel = () => {
         <button
           onClick={() => handleTransition('next')}
           className="absolute right-4 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 translate-x-4 
-          md:translate-x-12 z-10 bg-white shadow-lg rounded-full p-2 md:p-3 
-          hover:bg-gray-100 transition-all"
+          md:translate-x-12 z-10 bg-background shadow-lg rounded-full p-2 md:p-3 
+          cursor-pointer transition-all"
         >
-          <ChevronRight className="w-5 h-5 md:w-6 md:h-6 dark:text-gray-800" />
+          <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-foreground" />
         </button>
       </div>
     </section>

@@ -9,7 +9,8 @@ const TechCard = ({ name, icon }: TechCardProps) => {
   return (
     <div
       className="flex flex-col items-center justify-center gap-2 rounded-xl 
-    px-6 py-4 transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
+    px-4 md:px-6 py-2 md:py-4 transition-all duration-300 hover:scale-105 hover:shadow-md 
+    cursor-pointer bg-card"
     >
       <Image
         src={icon || ''}
