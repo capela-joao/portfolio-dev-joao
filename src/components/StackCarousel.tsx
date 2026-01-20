@@ -38,7 +38,10 @@ const StackCarousel = () => {
   );
 
   return (
-    <section className="mt-4 md:mt-10 md:px-10 bg-background text-foreground">
+    <section
+      id="stacks"
+      className="mt-4 md:mt-10 md:px-10 bg-background text-foreground"
+    >
       <h3
         className="text-2xl md:text-3xl font-semibold mb-6 md:mt-20 
       text-center md:text-left"

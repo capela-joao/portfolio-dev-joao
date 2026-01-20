@@ -8,6 +8,7 @@ const Header = () => {
   const { resolvedTheme } = useTheme();
   return (
     <section
+      id="header"
       className="
       flex flex-col items-center gap-6
       md:px-6 md:gap-10
@@ -38,7 +39,7 @@ const Header = () => {
         <div className="flex gap-4 pt-2">
           {resolvedTheme === 'dark' ? (
             <SocialLink
-              href="https://dev.to/capela_joao"
+              href="https://github.com/capela_joao"
               icon="/assets/socials/github-white-icon.png"
             />
           ) : (
@@ -55,8 +56,9 @@ const Header = () => {
       </div>
 
       <Image
+        priority
         src="/assets/perfil.jpeg"
-        alt="foto-de-perfil"
+        alt="Foto de João Paulo, desenvolvedor front-end."
         width={400}
         height={400}
         className="rounded-xl shadow-xl"

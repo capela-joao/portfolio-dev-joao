@@ -16,18 +16,26 @@ const Navbar = () => {
     },
     {
       label: 'About Me',
-      href: '/about',
+      href: '#about',
+    },
+    {
+      label: 'Projects',
+      href: '#projects',
+    },
+    {
+      label: 'Techs',
+      href: '#stacks',
     },
     {
       label: 'Contact Me',
-      href: '/contact',
+      href: '#contact',
     },
   ];
   return (
     <nav
       className="w-full h-16 flex justify-between px-6 shadow-md 
       dark:shadow-none border 
-      border-border relative bg-background text-foreground"
+      border-border fixed bg-background text-foreground"
     >
       <div className="flex items-center font-bold text-2xl md:text-3xl">
         <Link href="/">Dev-Joao</Link>

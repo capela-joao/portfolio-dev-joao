@@ -4,7 +4,10 @@ import { ProjectData } from '@/data/arrayProjects';
 
 const Projects = () => {
   return (
-    <div className="flex flex-col md:px-10 bg-background text-foreground">
+    <section
+      id="projects"
+      className="flex flex-col md:px-10 bg-background text-foreground"
+    >
       <h2
         className="text-3xl font-semibold mt-10 md:mb-10 md:mt-20 text-center 
       md:text-left"
@@ -18,11 +21,12 @@ const Projects = () => {
             image={project.image}
             title={project.title}
             description={project.description}
-            link={project.link}
+            linkDeploy={project.linkDeploy}
+            linkRepo={project.linkRepo}
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

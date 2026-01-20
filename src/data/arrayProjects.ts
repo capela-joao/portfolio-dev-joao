@@ -9,7 +9,8 @@ export const ProjectData = [
       além de explorar boas práticas de organização, roteamento e qualidade 
       de código, utilizando ferramentas amplamente adotadas no mercado.`.trim(),
     image: '/assets/projects/miniblog.png',
-    link: 'https://miniblog.dev-joao.app.br',
+    linkDeploy: 'https://miniblog.dev-joao.app.br',
+    linkRepo: 'https://github.com/capela-joao/project-mini-blog',
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ export const ProjectData = [
       gerenciamento de estado com Redux, além de criação de posts e 
       edição de perfil.`.trim(),
     image: '/assets/projects/reactgram.png',
-    link: 'https://reactgram.dev-joao.app.br',
+    linkDeploy: 'https://reactgram.dev-joao.app.br',
+    linkRepo: 'https://github.com/capela-joao/project-reactgram',
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const ProjectData = [
       Swagger, seguindo boas práticas de segurança, validação e organização de 
       código.`.trim(),
     image: '/assets/projects/reactgram-backend.png',
-    link: 'https://reactgram-backend.dev-joao.app.br',
+    linkDeploy: 'https://reactgram-backend.dev-joao.app.br',
+    linkRepo: 'https://github.com/capela-joao/project-reactgram-backend',
   },
 ];

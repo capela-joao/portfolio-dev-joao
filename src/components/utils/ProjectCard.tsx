@@ -6,10 +6,17 @@ interface ProjectCardProps {
   image: string;
   title: string;
   description: string;
-  link: string;
+  linkDeploy: string;
+  linkRepo: string;
 }
 
-const ProjectCard = ({ image, title, description, link }: ProjectCardProps) => {
+const ProjectCard = ({
+  image,
+  title,
+  description,
+  linkDeploy,
+  linkRepo,
+}: ProjectCardProps) => {
   return (
     <div
       className="flex flex-col items-center md:p-4 rounded-xl hover:shadow-lg 
@@ -28,7 +35,7 @@ const ProjectCard = ({ image, title, description, link }: ProjectCardProps) => {
       </p>
       <div className="flex justify-between gap-2">
         <Link
-          href={link}
+          href={linkDeploy}
           className="mt-auto bg-accent hover:bg-accent/80 p-4 px-10 text-center rounded-lg 
           text-text-accent-foreground
           font-semibold transition hover:scale-105 mb-6"
@@ -36,7 +43,7 @@ const ProjectCard = ({ image, title, description, link }: ProjectCardProps) => {
           Ver projeto
         </Link>
         <Link
-          href={link}
+          href={linkRepo}
           className="mt-auto bg-accent hover:bg-accent/80 p-4 px-10 text-center rounded-lg 
           text-text-accent-foreground
           font-semibold transition hover:scale-105 mb-6"
