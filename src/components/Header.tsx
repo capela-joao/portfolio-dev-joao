@@ -17,6 +17,7 @@ const Header = () => {
       py-12
       bg-background text-foreground
       "
+      aria-label="Introdução"
     >
       <div className="space-y-4 max-w-xl">
         <h1 className="font-extrabold text-3xl md:text-4xl tracking-tight">

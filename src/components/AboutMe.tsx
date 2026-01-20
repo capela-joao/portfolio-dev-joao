@@ -4,6 +4,7 @@ const AboutMe = () => {
   return (
     <section
       id="about"
+      aria-label="Sobre Mim"
       className="mt-4 md:mt-10 md:px-10 bg-background text-foreground"
     >
       <h3 className="font-semibold text-2xl md:text-3xl">Sobre Mim</h3>

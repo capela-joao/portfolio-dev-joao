@@ -5,6 +5,7 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
+      aria-label="Contate-me"
       className="mt-4 md:mt-10 lg:mt-20 md:px-10 bg-background 
     text-foreground border-t border-border"
     >

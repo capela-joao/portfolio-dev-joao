@@ -40,6 +40,7 @@ const StackCarousel = () => {
   return (
     <section
       id="stacks"
+      aria-label="Tecnologias"
       className="mt-4 md:mt-10 md:px-10 bg-background text-foreground"
     >
       <h3

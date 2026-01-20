@@ -14,8 +14,19 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Dev-joao',
-  description: 'Bem-vindo ao meu portfólio pessoal!',
+  title: 'Dev-João | Desenvolvedor Front-End',
+  description:
+    'Desenvolvedor Front-End especializado em React, TypeScript, Next.js e TailwindCSS. Mais de 4 anos de experiência criando interfaces modernas e escaláveis.',
+  keywords: [
+    'desenvolvedor front-end',
+    'react',
+    'nextjs',
+    'typescript',
+    'tailwindcss',
+    'joão paulo goulart cavalheiro',
+  ],
+  authors: [{ name: 'João Paulo Goulart Cavalheiro' }],
+  creator: 'João Paulo Goulart Cavalheiro',
 };
 
 export default function RootLayout({

@@ -6,6 +6,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
+      aria-label="Projetos Pessoais"
       className="flex flex-col md:px-10 bg-background text-foreground"
     >
       <h2

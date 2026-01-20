@@ -30,7 +30,7 @@ const ProjectCard = ({
         height={400}
         className="object-cover"
       />
-      <p className="font-base text-lg space-y-1 text-foreground p-4 text-justify">
+      <p className="space-y-1 text-foreground p-4 text-justify">
         {description}
       </p>
       <div className="flex justify-between gap-2">
