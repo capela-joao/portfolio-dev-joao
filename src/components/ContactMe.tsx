@@ -10,7 +10,7 @@ const ContactMe = () => {
     text-foreground border-t border-border"
     >
       <h3
-        className="font-bold text-2xl md:text-3xl text-foreground
+        className="font-semibold text-2xl md:text-3xl text-foreground
        mb-4 md:mb-10 lg:mb-20 mt-4 md:mt-10 lg:mt-20"
       >
         Entre em contato comigo:
