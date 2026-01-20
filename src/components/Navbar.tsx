@@ -35,7 +35,7 @@ const Navbar = () => {
     <nav
       className="w-full h-16 flex justify-between px-6 shadow-md 
       dark:shadow-none border 
-      border-border fixed bg-background text-foreground"
+      border-border fixed bg-background text-foreground z-50"
     >
       <div className="flex items-center font-bold text-2xl md:text-3xl">
         <Link href="/">Dev-Joao</Link>
@@ -55,7 +55,7 @@ const Navbar = () => {
         <ChangeTheme />
       </div>
 
-      <div className="lg:hidden flex items-center gap-2">
+      <div className="lg:hidden flex items-center gap-2  z-50">
         <ChangeTheme />
         <button
           onClick={toggleMenu}
@@ -70,7 +70,7 @@ const Navbar = () => {
 
       {isOpen && (
         <div
-          className="absolute top-16 left-0 w-full shadow-md lg:hidden
+          className="absolute top-14 left-0 w-full shadow-md lg:hidden
           bg-background text-foreground border-b border-border dark:shadow-none"
         >
           <div className="flex flex-col px-6 py-4 gap-4">

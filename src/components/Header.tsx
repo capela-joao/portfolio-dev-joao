@@ -11,7 +11,7 @@ const Header = () => {
       id="header"
       className="
       flex flex-col items-center gap-6
-      md:px-6 md:gap-10
+      md:px-6 md:gap-10 mt-10
       lg:flex-row lg:justify-between
       lg:px-8 lg:gap-0
       py-12

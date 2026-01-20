@@ -25,7 +25,7 @@ export const ContactMeData = [
     id: 4,
     name: 'Localização: ',
     description: 'Aberto a trabalho remoto e híbrido.',
-    link: 'capelajoao.dev@gmail.com',
+    link: '#',
     icon: '/assets/socials/icons8-location-48.png',
   },
 ];
